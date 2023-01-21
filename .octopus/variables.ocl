@@ -24,3 +24,7 @@ variable "Project.Database.Name" {
         environment = ["development", "qa", "staging"]
     }
 }
+
+variable "Project.Database.ApprovalRequired" {
+    value "#{Octopus.Action[Auto-Approve Database Delta Script].Output.ApprovalRequired}" {}
+}
